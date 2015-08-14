@@ -1,5 +1,6 @@
 # eewbot
-Deliver Earthquake Early Warning Notifications to Slack.
+Deliver Earthquake Early Warning Notifications to Slack.  
+このボットはSlackに緊急地震速報を投稿します。
 
 ##### Installation
 1. `cd ~/.../eew`
