@@ -6,9 +6,10 @@ Deliver Earthquake Early Warning Notifications to Slack.
 2. `git clone git@github.com:lumios/eewbot.git`
 3. `sudo npm install`
 
-4. Open `index.js`
-5. Add [Twitter oauth key](https://dev.twitter.com/oauth) to `var client`
-6. Add [Slack Webhook](https://slack.com/services/new/incoming-webhook) to `var slackURL`
+##### Setup
+1. Open `index.js`
+2. Add [Twitter oauth key](https://dev.twitter.com/oauth) to `var client`
+3. Add [Slack Webhook](https://slack.com/services/new/incoming-webhook) to `var slackURL`
 
 ##### Run
 1. `cd ~/.../eewbot`
