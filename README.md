@@ -1,7 +1,6 @@
 # eewbot
-An Earthquake Notifier Bot for Slack
+Deliver Earthquake Early Warning Notifications to Slack.
 
-### Installation
 ##### Installation
 1. `cd ~/.../eew`
 2. `git clone git@github.com:lumios/eewbot.git`
