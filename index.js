@@ -37,8 +37,6 @@ client.stream('statuses/filter', {follow: userID, filter_level: 'low'}, function
         }
 
         if (tweet.user.id_str == userID) {
-            console.log("Earthquake Detected, Triggering Event:");
-
             dataParse(tweet.text);
         }
     });
@@ -105,22 +103,20 @@ function dataParse(inputData) {
     else {
         var seismicLocale = seismic;}
 
-    console.log(
-        "Time: " + earthquake_time + ", " +
-        "Update: " + situationString);
-    console.log(
-        "Epicenter: " + epicenterLocale + " " +
-        "(" + latitude + "," + longitude + "), " +
-        "Magnitude: " + magnitude + ", " +
-        "Seismic: " + seismic);
-
-    var sendString =
-        "Time: " + earthquake_time + ", " + "Update: " + situationString + "\n" +
-        "Occurred: " + epicenterLocale + ", " + "Magnitude: " + magnitude + ", " + "Seismic: " + seismic;
+    var titleString =
+        earthquake_time + " - " + epicenterLocale;
+    var messageString =
+        "Update " + situationString + ", Magnitude: " + magnitude + ", Seismic: " + seismicLocale;
 
     if (revision == 1) {
-        var output = "*An Earthquake has Occurred.*\n" + sendString;
-    } else {var output = sendString;}
+        var output =
+        "*An Earthquake has Occurred.*" + "\n" +
+        titleString + "\n" +
+        messageString;
+    } else {var output = messageString;}
+
+    console.log(titleString);
+    console.log(messageString);
 
     slackBot.send({
         username: "Earthquake Bot",
